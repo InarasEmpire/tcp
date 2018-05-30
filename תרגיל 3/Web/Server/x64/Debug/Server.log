@@ -1,0 +1,56 @@
+﻿  HTTPServer.cpp
+c:\users\inara\documents\אקדמית\תקשורת\תרגילים\פתרונות לתרגילים\ארז\shai_and_itay\server\httpserver.cpp(230): error C4996: 'inet_ntoa': Use inet_ntop() or InetNtop() instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings
+  c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(1868): note: see declaration of 'inet_ntoa'
+c:\users\inara\documents\אקדמית\תקשורת\תרגילים\פתרונות לתרגילים\ארז\shai_and_itay\server\httpserver.cpp(282): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\inara\documents\אקדמית\תקשורת\תרגילים\פתרונות לתרגילים\ארז\shai_and_itay\server\httpserver.cpp(291): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\inara\documents\אקדמית\תקשורת\תרגילים\פתרונות לתרגילים\ארז\shai_and_itay\server\httpserver.cpp(281): error C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(119): note: see declaration of 'strcpy'
+c:\users\inara\documents\אקדמית\תקשורת\תרגילים\פתרונות לתרגילים\ארז\shai_and_itay\server\httpserver.cpp(290): error C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(119): note: see declaration of 'strcpy'
+c:\users\inara\documents\אקדמית\תקשורת\תרגילים\פתרונות לתרגילים\ארז\shai_and_itay\server\httpserver.cpp(367): warning C4267: '+=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\inara\documents\אקדמית\תקשורת\תרגילים\פתרונות לתרגילים\ארז\shai_and_itay\server\httpserver.cpp(334): error C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+c:\users\inara\documents\אקדמית\תקשורת\תרגילים\פתרונות לתרגילים\ארז\shai_and_itay\server\httpserver.cpp(337): error C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+c:\users\inara\documents\אקדמית\תקשורת\תרגילים\פתרונות לתרגילים\ארז\shai_and_itay\server\httpserver.cpp(340): error C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+c:\users\inara\documents\אקדמית\תקשורת\תרגילים\פתרונות לתרגילים\ארז\shai_and_itay\server\httpserver.cpp(354): error C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(453): note: see declaration of 'strtok'
+c:\users\inara\documents\אקדמית\תקשורת\תרגילים\פתרונות לתרגילים\ארז\shai_and_itay\server\httpserver.cpp(355): error C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(205): note: see declaration of 'fopen'
+c:\users\inara\documents\אקדמית\תקשורת\תרגילים\פתרונות לתרגילים\ארז\shai_and_itay\server\httpserver.cpp(365): error C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(90): note: see declaration of 'strcat'
+c:\users\inara\documents\אקדמית\תקשורת\תרגילים\פתרונות לתרגילים\ארז\shai_and_itay\server\httpserver.cpp(371): error C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+c:\users\inara\documents\אקדמית\תקשורת\תרגילים\פתרונות לתרגילים\ארז\shai_and_itay\server\httpserver.cpp(374): error C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+c:\users\inara\documents\אקדמית\תקשורת\תרגילים\פתרונות לתרגילים\ארז\shai_and_itay\server\httpserver.cpp(377): error C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+c:\users\inara\documents\אקדמית\תקשורת\תרגילים\פתרונות לתרגילים\ארז\shai_and_itay\server\httpserver.cpp(396): error C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+c:\users\inara\documents\אקדמית\תקשורת\תרגילים\פתרונות לתרגילים\ארז\shai_and_itay\server\httpserver.cpp(398): error C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+c:\users\inara\documents\אקדמית\תקשורת\תרגילים\פתרונות לתרגילים\ארז\shai_and_itay\server\httpserver.cpp(408): error C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(119): note: see declaration of 'strcpy'
+c:\users\inara\documents\אקדמית\תקשורת\תרגילים\פתרונות לתרגילים\ארז\shai_and_itay\server\httpserver.cpp(409): error C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(90): note: see declaration of 'strcat'
+c:\users\inara\documents\אקדמית\תקשורת\תרגילים\פתרונות לתרגילים\ארז\shai_and_itay\server\httpserver.cpp(413): error C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+c:\users\inara\documents\אקדמית\תקשורת\תרגילים\פתרונות לתרגילים\ארז\shai_and_itay\server\httpserver.cpp(416): error C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+c:\users\inara\documents\אקדמית\תקשורת\תרגילים\פתרונות לתרגילים\ארז\shai_and_itay\server\httpserver.cpp(446): error C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(453): note: see declaration of 'strtok'
+c:\users\inara\documents\אקדמית\תקשורת\תרגילים\פתרונות לתרגילים\ארז\shai_and_itay\server\httpserver.cpp(447): error C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(119): note: see declaration of 'strcpy'
+c:\users\inara\documents\אקדמית\תקשורת\תרגילים\פתרונות לתרגילים\ארז\shai_and_itay\server\httpserver.cpp(448): error C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(453): note: see declaration of 'strtok'
+c:\users\inara\documents\אקדמית\תקשורת\תרגילים\פתרונות לתרגילים\ארז\shai_and_itay\server\httpserver.cpp(449): error C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(453): note: see declaration of 'strtok'
+c:\users\inara\documents\אקדמית\תקשורת\תרגילים\פתרונות לתרגילים\ארז\shai_and_itay\server\httpserver.cpp(450): error C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(453): note: see declaration of 'strtok'
+c:\users\inara\documents\אקדמית\תקשורת\תרגילים\פתרונות לתרגילים\ארז\shai_and_itay\server\httpserver.cpp(451): error C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(2254): note: see declaration of 'sscanf'
+c:\users\inara\documents\אקדמית\תקשורת\תרגילים\פתרונות לתרגילים\ארז\shai_and_itay\server\httpserver.cpp(453): error C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(205): note: see declaration of 'fopen'
+c:\users\inara\documents\אקדמית\תקשורת\תרגילים\פתרונות לתרגילים\ארז\shai_and_itay\server\httpserver.cpp(458): error C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(453): note: see declaration of 'strtok'
