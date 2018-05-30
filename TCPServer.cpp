@@ -1,3 +1,8 @@
+#define _WINSOCK_DEPRECATED_NO_WARNINGS
+#define _CRT_SECURE_NO_WARNINGS
+//#define D_SCL_SECURE_NO_WARNINGS
+
+
 #include <iostream>
 #include <sstream>
 
@@ -7,6 +12,18 @@ using namespace std;
 #include <string.h>
 #include <time.h>
 #include <fstream>
+
+char* str2char(string s);
+char* headRequest(int index);
+char* getRequest(int index, bool onlyHead);
+char* putRequest(string fileContent, int index);
+char* headerFields();
+char* traceRequest(int index);
+char* getFileName(char* fileName);
+char* getContent(int index);
+char* optionsRequest();
+char* deleteRequest(int index);
+
 
 
 enum eMessageIndex {
@@ -362,34 +379,35 @@ void sendMessage(int index)
 {
 	int bytesSent = 0;
 	char sendBuff[255];
+	char *response, *content;
 
 	SOCKET msgSocket = sockets[index].id;
 
 	switch (sockets[index].sendSubType)
 	{
 	case eRequestType::Get:
-		char *response = getRequest(index,false);
+		response = getRequest(index,false);
 		strcpy(sendBuff, response);
 		break;
 	case eRequestType::Head:
-		char *response = headRequest(index);
+		response = headRequest(index);
 		strcpy(sendBuff, response);
 		break;
 	case eRequestType::Delete:
-		char *response = deleteRequest(index);
+		response = deleteRequest(index);
 		strcpy(sendBuff, response);
 		break;
 	case eRequestType::Options:
-		char *response = optionsRequest();
+		response = optionsRequest();
 		strcpy(sendBuff, response);
 		break;
 	case eRequestType::Put:
-		char* content = getContent(index);
-		char *response = putRequest(content, index);
+		content = getContent(index);
+		response = putRequest(content, index);
 		strcpy(sendBuff, response);
 		break;
 	case eRequestType::Trace:
-		char *response = traceRequest(index);
+		response = traceRequest(index);
 		strcpy(sendBuff, response);
 		break;
 	case eRequestType::Exit:
@@ -413,16 +431,6 @@ void sendMessage(int index)
 
 	sockets[index].send = IDLE;
 }
-
-char* str2char(string s);
-char* headRequest(int index);
-char* getRequest(int index, bool onlyHead);
-char* putRequest(string fileContent,int index);
-char* headerFields();
-char* traceRequest(int index);
-char* getFileName(char* fileName);
-char* getContent(int index);
-char* optionsRequest();
 
 char* optionsRequest()
 {
@@ -476,7 +484,7 @@ char* getRequest(int index, bool onlyHead)
 			content += currentLine;
 		}
 		content += "\r\n";
-		contentLength = content.length;
+		contentLength = content.length();
 
 		res += messages[CONTENT_LENGTH] + to_string(contentLength) + "\r\n";
 
@@ -498,6 +506,33 @@ char* getRequest(int index, bool onlyHead)
 	return str2char(res);
 }
 
+char* deleteRequest(int index)
+{
+	string res = "";
+	ofstream file;
+	file.open(sockets[index].filePath);
+	if (!file)
+	{
+		res += messages[ERROR_404];
+	}
+	else
+	{
+		file.close();
+		if (remove(sockets[index].filePath))
+		{
+			res += messages[OK_200];
+			res += "Web server:file deleted successfully\r\n";
+		}
+		else
+		{
+			res += messages[NOT_IMP_501];
+			res += "Web server: error occured while executing request\r\n";
+		}
+	}
+
+	return str2char(res);
+}
+
 char* headRequest(int index)
 {
 	return getRequest(index, false);
@@ -505,7 +540,7 @@ char* headRequest(int index)
 
 char* headerFields()
 {
-	char* val;
+	char* val="";
 	// Get the current time.
 	time_t timer;
 	time(&timer);
@@ -522,10 +557,9 @@ char* headerFields()
 
 char* str2char(string s)
 {
-	char* res;
-	std::copy(s.begin(), s.end(), res);
-	res[s.size()] = '\0';
-	return res;
+
+	return _strdup(s.c_str());
+
 }
 
 char* traceRequest(int index)
