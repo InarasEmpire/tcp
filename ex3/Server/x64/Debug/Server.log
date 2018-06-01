@@ -1,0 +1,8 @@
+﻿  TCPServer.cpp
+c:\users\inara\downloads\tcpserver.cpp(365): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\users\inara\downloads\tcpserver.cpp(367): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\users\inara\downloads\tcpserver.cpp(501): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\inara\downloads\tcpserver.cpp(616): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\users\inara\downloads\tcpserver.cpp(654): warning C4244: '=': conversion from 'time_t' to 'long', possible loss of data
+  Server.vcxproj -> C:\Users\Inara\Desktop\Tikshoret\ex3\x64\Debug\Server.exe
+  Server.vcxproj -> C:\Users\Inara\Desktop\Tikshoret\ex3\x64\Debug\Server.pdb (Partial PDB)
