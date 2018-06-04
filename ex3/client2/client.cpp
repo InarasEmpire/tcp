@@ -11,12 +11,12 @@ using namespace std;
 const int TIME_PORT = 27015;
 const int PORT = 8080;
 
-string requests[] = {"HTTP 1.1 HEAD /get.html"
-,"HTTP 1.1 GET /get.html"
-,"HTTP 1.1 DELETE /delete.html" 
-,"HTTP 1.1 PUT /put.html \r\n\r\n where is mister Dark Matter?" 
-,"HTTP 1.1 OPTIONS" 
-,"HTTP 1.1 TRACE" 
+string requests[] = {"HTTP/1.1 HEAD /get.html"
+,"HTTP/1.1 GET /get.html"
+,"HTTP/1.1 DELETE /delete.html" 
+,"HTTP/1.1 PUT /put.html \r\n\r\n where is mister Dark Matter?" 
+,"HTTP/1.1 OPTIONS" 
+,"HTTP/1.1 TRACE" 
 ,"Exit"
 };
 
@@ -96,7 +96,7 @@ void main()
 	char recvBuff[255];
 	int option = 0;
 
-	while (option != 3)
+	while (option != 6)
 	{
 		cout << "\nPlease choose an option:\n";
 		cout << "1 - Get \n";
@@ -110,9 +110,11 @@ void main()
 
 		cin >> option;
 
-		if (option > 1 || option < 7)
-			strcpy(sendBuff, (requests[option -1]).c_str());
-
+		if (option >= 1 && option <= 7)
+		{
+			option--;
+			strcpy(sendBuff, (requests[option]).c_str());
+		}
 		// The send function sends data on a connected socket.
 		// The buffer to be sent and its size are needed.
 		// The last argument is an idicator specifying the way 
@@ -120,20 +122,20 @@ void main()
 		bytesSent = send(connSocket, sendBuff, (int)strlen(sendBuff), 0);
 		if (SOCKET_ERROR == bytesSent)
 		{
-			cout << "Time Client: Error at send(): " << WSAGetLastError() << endl;
+			cout << "Web Client: Error at send(): " << WSAGetLastError() << endl;
 			closesocket(connSocket);
 			WSACleanup();
 			return;
 		}
-		cout << "Time Client: Sent: " << bytesSent << "/" << strlen(sendBuff) << " bytes of \"" << sendBuff << "\" message.\n";
+		cout << "Web Client: Sent: " << bytesSent << "/" << strlen(sendBuff) << " bytes of \"" << sendBuff << "\" message.\n";
 
 		// Gets the server's answer for options 1 and 2.
-		if (option == 1 || option == 2)
+		if (1)
 		{
 			bytesRecv = recv(connSocket, recvBuff, 255, 0);
 			if (SOCKET_ERROR == bytesRecv)
 			{
-				cout << "Time Client: Error at recv(): " << WSAGetLastError() << endl;
+				cout << "Web Client: Error at recv(): " << WSAGetLastError() << endl;
 				closesocket(connSocket);
 				WSACleanup();
 				return;
@@ -145,12 +147,12 @@ void main()
 			}
 
 			recvBuff[bytesRecv] = '\0'; //add the null-terminating to make it a string
-			cout << "Time Client: Recieved: " << bytesRecv << " bytes of \"" << recvBuff << "\" message.\n";
+			cout << "Web Client: Recieved: " << bytesRecv << " bytes of \"" << recvBuff << "\" message.\n";
 		}
 		else if (option == 3)
 		{
 			// Closing connections and Winsock.
-			cout << "Time Client: Closing Connection.\n";
+			cout << "Web Client: Closing Connection.\n";
 			closesocket(connSocket);
 			WSACleanup();
 		}
